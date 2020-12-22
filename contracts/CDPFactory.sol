@@ -9,18 +9,18 @@ contract CDPFactory is ProxyFactory{
     }
 
     address private _implementation;
-    address private _dai;
+    DAIToken private _dai;
 
     function getCDPImplementationAddress() public view returns (address implementation){
-        return _implementation();
+        return _implementation;
     }
 
     function getDaiAddress() public view returns (address implementation){
-        return _dai;
+        return address(_dai);
     }
 
     function createCDP(uint32 _daiCount) public returns (address cdp){
-        bytes memory args = abi.encodeWithSignature("initialize(address,uint32)", msg.sender, _daiCount);
+        bytes memory args = abi.encodeWithSignature("initialize(address,uint32, address)", msg.sender, _daiCount, address(_dai));
         address cdp = deployMinimal(_implementation, args);
         _dai.mint(cdp, _daiCount);
         return cdp;
