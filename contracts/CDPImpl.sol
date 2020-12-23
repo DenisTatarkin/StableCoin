@@ -2,15 +2,17 @@ pragma solidity ^0.5.1;
 import '@openzeppelin/upgrades/contracts/Initializable.sol';
 import './Ownable.sol';
 import './DAIToken.sol';
+import './CDPOracleInterface.sol';
 
 contract CDPImpl is Initializable{
-    function initialize (address payable _borrow, address _auctionAddr, uint256 _daiC, address _daiAddr) public {
+    function initialize (address payable _borrow, address _auctionAddr, uint256 _daiC, address _daiAddr, address _oracleAddr) public {
         _borrower = _borrow;
         _daiCount = _daiC;
         _isOpened = false;
         _isClosed = false;
         _dai = DAIToken(_daiAddr);
         _auction = _auctionAddr;
+        _oracle = CDPOracleInterface(_oracleAddr);
     }
 
     address payable private _borrower;
@@ -22,6 +24,7 @@ contract CDPImpl is Initializable{
     uint256 private _course;
     uint256 private _coeff;
     DAIToken _dai;
+    CDPOracleInterface _oracle;
 
     function open() public payable{
         require(!_isOpened && !_isClosed);
@@ -61,7 +64,7 @@ contract CDPImpl is Initializable{
     }
 
     function setCourse(uint256 _daiC) private returns (uint256 course){
-        //Not implemented
+        return uint256 (_oracle.getDollarRate());
     }
 
     function getCourse() public returns (uint256 course){
