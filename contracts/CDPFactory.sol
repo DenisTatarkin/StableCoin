@@ -32,7 +32,7 @@ contract CDPFactory is ProxyFactory{
         bytes memory args = abi.encodeWithSignature("initialize(address, address, uint32, address, address)", 
                                                     msg.sender, address(_auction), _daiCount, address(_dai), address(_oracle));
         address cdp = deployMinimal(_implementation, args);
-        _dai.mint(cdp, msg.sender, _daiCount);
+        _dai.mint(cdp, _daiCount);
         return cdp;
     }
 }
