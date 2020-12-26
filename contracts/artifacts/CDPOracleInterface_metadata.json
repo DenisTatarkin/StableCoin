@@ -1,0 +1,166 @@
+{
+	"compiler": {
+		"version": "0.5.17+commit.d19bba13"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getDollarRate",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "dollarRate",
+						"type": "int256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"isOwner()": {
+					"return": "true if `msg.sender` is the owner of the contract."
+				},
+				"owner()": {
+					"return": "the address of the owner."
+				},
+				"renounceOwnership()": {
+					"details": "Allows the current owner to relinquish control of the contract."
+				},
+				"transferOwnership(address)": {
+					"details": "Allows the current owner to transfer control of the contract to a newOwner.",
+					"params": {
+						"newOwner": "The address to transfer ownership to."
+					}
+				}
+			}
+		},
+		"userdoc": {
+			"methods": {
+				"renounceOwnership()": {
+					"notice": "Renouncing to ownership will leave the contract without an owner. It will not be possible to call the functions with the `onlyOwner` modifier anymore."
+				}
+			}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/contracts/CDPOracleInterface.sol": "CDPOracleInterface"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0x23cc776f11b627ec6bd0d0e06eead9ce2151685e03a7fc2ce334639b57399980",
+			"urls": [
+				"bzz-raw://94ec3817320d6622ddc61fd2709a5d4372e6a2caa11aaa6fddd9ca3f68f9f212",
+				"dweb:/ipfs/QmUk95XkgePy9QyqPQHA6XaRzs1cERZTZpNQTWzYEEpZqN"
+			]
+		},
+		"localhost/contracts/CDPOracleInterface.sol": {
+			"keccak256": "0x5a4b4baa4e7cbc4fd71bc8a446c1e008a5ff13097e1f5def080612ea411b5457",
+			"urls": [
+				"bzz-raw://6bbbf292c25a763692e14aab1ce03ce78cfde9d4e72b5b2d74eee70b0070f744",
+				"dweb:/ipfs/QmYrDEuVQVkR8SHrY2Fziu97njNAywBWNY3K68CbwSNtBZ"
+			]
+		},
+		"localhost/contracts/Ownable.sol": {
+			"keccak256": "0xb677f721872a791dbdfe4df9d1550f1662d9a69b7f42580e8f3a37703c2a2960",
+			"urls": [
+				"bzz-raw://285625bc3dfc94014f864d2e417ff769fcffae7c88b50a756fd557cc0e4b4915",
+				"dweb:/ipfs/QmTNwTcGgTYezSEjDJ26s5ZRuwMPTAhL7vGtQVp1oN3Fw3"
+			]
+		}
+	},
+	"version": 1
+}

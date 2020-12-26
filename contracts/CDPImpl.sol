@@ -6,7 +6,7 @@ import './CDPOracleInterface.sol';
 import './CDPRules.sol';
 
 contract CDPImpl is Initializable{
-    function initialize (address payable _borrow, address _auctionAddr, uint256 _daiC, address _daiAddr, address _oracleAddr) public {
+     constructor (address _borrow, address _auctionAddr, address _daiAddr, address _oracleAddr, address _rulesAddr, uint256 _daiC) public {
         _borrower = _borrow;
         _daiCount = _daiC;
         _isOpened = false;
@@ -14,10 +14,11 @@ contract CDPImpl is Initializable{
         _dai = DAIToken(_daiAddr);
         _auction = _auctionAddr;
         _oracle = CDPOracleInterface(_oracleAddr);
+        _rules = CDPRules(_rulesAddr);
         _deposit = (1 + 1/getCoeff()) * _daiCount / getCourse();
     }
 
-    address payable private _borrower;
+    address private _borrower;
     address private _auction;
     uint256 private _daiCount;
     bool private _isOpened;
@@ -46,7 +47,7 @@ contract CDPImpl is Initializable{
         }
         _isOpened = false;
         _isClosed = true;
-        _borrower.transfer(setCourse(_daiC));
+       // _borrower.transfer(setCourse(_daiC));
         _dai.transferFrom(_borrower, address(this), _daiC);
         _daiCount = 0;
     }
@@ -73,19 +74,19 @@ contract CDPImpl is Initializable{
         return uint256 (_oracle.getDollarRate());
     }
 
-    function getCourse() public returns (uint256 course){
+    function getCourse() public view returns (uint256 course){
         return _course;
     }
 
-    function getDAICount() public returns (uint256 count){
+    function getDAICount() public view returns (uint256 count){
         return _daiCount;
     }
 
-    function getBorrower() public returns (address borrower){
+    function getBorrower() public view returns (address borrower){
         return _borrower;
     }
 
-    function getDeposit() public returns (uint256 deposit){
+    function getDeposit() public view returns (uint256 deposit){
         return _deposit;
     }
 

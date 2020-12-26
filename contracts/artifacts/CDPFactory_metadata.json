@@ -1,0 +1,463 @@
+{
+	"compiler": {
+		"version": "0.5.17+commit.d19bba13"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "proxy",
+						"type": "address"
+					}
+				],
+				"name": "ProxyCreated",
+				"type": "event"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "adresses",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_daiCount",
+						"type": "uint256"
+					}
+				],
+				"name": "createCDP",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_salt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_logic",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_admin",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "deploy",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_logic",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "deployMinimal",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "proxy",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_salt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_logic",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_admin",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_signature",
+						"type": "bytes"
+					}
+				],
+				"name": "deploySigned",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getAuctionAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "auction",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getCDPImplementationAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "implementation",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getCDPOracleInterface",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "oracle",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getCDPRulesAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "rules",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "getDaiAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "dai",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_salt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_sender",
+						"type": "address"
+					}
+				],
+				"name": "getDeploymentAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_salt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_logic",
+						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_admin",
+						"type": "address"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_data",
+						"type": "bytes"
+					},
+					{
+						"internalType": "bytes",
+						"name": "_signature",
+						"type": "bytes"
+					}
+				],
+				"name": "getSigner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/contracts/CDPFactory.sol": "CDPFactory"
+		},
+		"evmVersion": "istanbul",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@chainlink/contracts/src/v0.6/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0x23cc776f11b627ec6bd0d0e06eead9ce2151685e03a7fc2ce334639b57399980",
+			"urls": [
+				"bzz-raw://94ec3817320d6622ddc61fd2709a5d4372e6a2caa11aaa6fddd9ca3f68f9f212",
+				"dweb:/ipfs/QmUk95XkgePy9QyqPQHA6XaRzs1cERZTZpNQTWzYEEpZqN"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/Initializable.sol": {
+			"keccak256": "0x9bfec92e36234ecc99b5d37230acb6cd1f99560233753162204104a4897e8721",
+			"urls": [
+				"bzz-raw://5cf7c208583d4d046d75bd99f5507412ab01cce9dd9f802ce9768a416d93ea2f",
+				"dweb:/ipfs/QmcQS1BBMPpVEkXP3qzwSjxHNrqDek8YeR7xbVWDC9ApC7"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/cryptography/ECDSA.sol": {
+			"keccak256": "0x0ca3de3dc8aac4114ff0b123fcabef91901de1a30938f3e954846ad99909b972",
+			"urls": [
+				"bzz-raw://9ce438a04dce608cc33cf4f8e31fc94d75ae9fda05911adc44f95330bb5ed93f",
+				"dweb:/ipfs/Qme9uVMjTKTWXb8DZKEkpFZ8ovSwwktBXHLtyKqcVzCtFK"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/upgradeability/BaseAdminUpgradeabilityProxy.sol": {
+			"keccak256": "0xbf8ee1cf63a430a3eb8b39a9145d0d133400b8db06fa9fd33056597f7d8ceb25",
+			"urls": [
+				"bzz-raw://58dc9f7b607b235e9efae48b003bf43aacb1b034853b8ead82830834405904a6",
+				"dweb:/ipfs/QmXqDDwV8vpufd6Xka5zYrxrSgbnfzrQTSMoN7dPTAHJ21"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/upgradeability/BaseUpgradeabilityProxy.sol": {
+			"keccak256": "0x1b37f808dc0a45976ad23aa53908c485a74a4d9fbd03066a5ab399c46436e570",
+			"urls": [
+				"bzz-raw://de04959e1261bbc2ee53a88b98469a888a2f2fa49c07ea87a5d646a8fe438558",
+				"dweb:/ipfs/QmUmYQaNnAMfvbfKLniFLHyBzsH77bCMf9NpNSfndfuqWh"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/upgradeability/InitializableAdminUpgradeabilityProxy.sol": {
+			"keccak256": "0x91f2b663c89b940dce6dbd00f5e7bf326cdf02d1da4ddbcb7e64b313e60d9afc",
+			"urls": [
+				"bzz-raw://bb1c5b7a18d4ff807bff6ded8e8f61586a09157a87f87d6271078bf57762d7c9",
+				"dweb:/ipfs/Qmdd9gNEAzHTEqJKgMzLNG1ib3L6a2S6pAhAT7RwZZWVSp"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/upgradeability/InitializableUpgradeabilityProxy.sol": {
+			"keccak256": "0x6b84a0236a899ba5aa673ea34d5efa1f93dba461e13d8799f51a9f7b64b59f4f",
+			"urls": [
+				"bzz-raw://905fe46ff8aa3c8698677552833331543ac9ef9bcc2c444772af9c0d1441f994",
+				"dweb:/ipfs/QmQda6SVGFNZQN5SrTQM2mf8oEgbFEaUhQpXetj9NmkfqV"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/upgradeability/Proxy.sol": {
+			"keccak256": "0xd8074ae5fa7ee6384ca8196a896612fb044bbf4ff4b7336d03cd97845000ac21",
+			"urls": [
+				"bzz-raw://3a111e1dc777d80e6c2ad41c6ff2bfb3ae8f61658fd6580ddf9ba9ab0d25a354",
+				"dweb:/ipfs/QmSfwvUqqiownzHeMmUiYkejWs6FXR2KLtHQnSzP6FivTj"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/upgradeability/ProxyFactory.sol": {
+			"keccak256": "0xf4932759c88b26dd0b37a7ba960c44f7a4e817127846befb4b4fb72ee8f2c573",
+			"urls": [
+				"bzz-raw://298f7729768e5bb74dcda31fb3412204c4565b94177dc281959d10d94dd31fe6",
+				"dweb:/ipfs/QmQimX8v1cfGFFWEMTXsysvqaFN1gbecMsrVnVtuCvdGuc"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/upgradeability/UpgradeabilityProxy.sol": {
+			"keccak256": "0xb02c6349ba01df9902857b6058f92b37f13187775cce9da74f6f28410205445b",
+			"urls": [
+				"bzz-raw://f05434b5110c9de912e001a5dc2b252947f474346cb8ea5ec26ea2efe7143aa7",
+				"dweb:/ipfs/QmbaksVa6vQz926TCHgJniKFuod44QhuGzVFYMtdUgdxba"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/utils/Address.sol": {
+			"keccak256": "0x7be7f8e4c08bc70ff9815e3f11c569f42aa3c447b5bc61fd75fb5cec97f63a9f",
+			"urls": [
+				"bzz-raw://f301a9226d637e1593916ba2de7b0b28c35f2adc3ca8526289fe1eedafa83bc2",
+				"dweb:/ipfs/QmPb991LE8nyvhB4BkX46P1Pan2ijH9tfqWwLAz65VUUKs"
+			]
+		},
+		"localhost/contracts/CDPAuction.sol": {
+			"keccak256": "0xc2973e1279e26aa698a4459d54d2b56cb57bbecbcb4ed20bd54374062f58b80d",
+			"urls": [
+				"bzz-raw://2429e633f36dd4c73ee33becedff8119c4ce696059bfa59e6579978ca3a9fc16",
+				"dweb:/ipfs/QmYScacDKNJcxrEh2BK2HCAwoeUuDqyrULnKSnXnCLBBWS"
+			]
+		},
+		"localhost/contracts/CDPFactory.sol": {
+			"keccak256": "0x3d926ef81d467aef66d0e23a95296140d7782850004670b83aeb49a281193cf0",
+			"urls": [
+				"bzz-raw://c88d879e78de14bde3d77635d67babb3e4e9043ab23626ca254f4601010e4a1a",
+				"dweb:/ipfs/QmdBmeg5CkFSTcnim9VgC8HuxbvF8ckkTAkUxqWDsvjHhz"
+			]
+		},
+		"localhost/contracts/CDPImpl.sol": {
+			"keccak256": "0x1e6b84a1d082651d9e3612aa2fe784b7387ef54149f6f419d64291d829f94478",
+			"urls": [
+				"bzz-raw://e8200a2785632b019ce7c7cd4df27011a7d231f93500b053f975016a454c60e8",
+				"dweb:/ipfs/QmVnukLBB6ceB431d5EQPWLJMSzWxUetTi2LYKhyjxRRvx"
+			]
+		},
+		"localhost/contracts/CDPOracleInterface.sol": {
+			"keccak256": "0x5a4b4baa4e7cbc4fd71bc8a446c1e008a5ff13097e1f5def080612ea411b5457",
+			"urls": [
+				"bzz-raw://6bbbf292c25a763692e14aab1ce03ce78cfde9d4e72b5b2d74eee70b0070f744",
+				"dweb:/ipfs/QmYrDEuVQVkR8SHrY2Fziu97njNAywBWNY3K68CbwSNtBZ"
+			]
+		},
+		"localhost/contracts/CDPRules.sol": {
+			"keccak256": "0xe8f08c8791cf5a3be241334949a8c82906c177c486f59a727e92a895cd9d9699",
+			"urls": [
+				"bzz-raw://c6001c01880318d06b2e7709046e57c4d77a905a99d46169614dbccc25e645ca",
+				"dweb:/ipfs/QmXrCbyzuMYd2Zn1u24wuTCqD4XzTNf9b9rmCv8Js36zDr"
+			]
+		},
+		"localhost/contracts/DAIToken.sol": {
+			"keccak256": "0xbbf9214347cb0016ef8e1eb01919d58c5711d1a708f6f75b74dc508223c7f514",
+			"urls": [
+				"bzz-raw://1f8dd60882e8f5b978535f5ac6fb66d481e916ce8c6c66f3962a9e08be39ed7b",
+				"dweb:/ipfs/QmX8yeHgA6MrD1eb3T4Dz6gfMvBbczdEzmGFmKCH1UoZrV"
+			]
+		},
+		"localhost/contracts/Ownable.sol": {
+			"keccak256": "0xb677f721872a791dbdfe4df9d1550f1662d9a69b7f42580e8f3a37703c2a2960",
+			"urls": [
+				"bzz-raw://285625bc3dfc94014f864d2e417ff769fcffae7c88b50a756fd557cc0e4b4915",
+				"dweb:/ipfs/QmTNwTcGgTYezSEjDJ26s5ZRuwMPTAhL7vGtQVp1oN3Fw3"
+			]
+		}
+	},
+	"version": 1
+}

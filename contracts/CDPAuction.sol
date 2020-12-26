@@ -19,7 +19,14 @@ contract CDPAuction is Ownable{
         bool Liquidated;
     }
 
-    address[] private _openedCDPs;
+    struct OpenedCDP
+    {
+        address cdpAddress;
+        uint256 DAICount;
+        bool isOpened;
+    }
+
+    OpenedCDP[] private _openedCDPs;
     uint256 private _openedCDPsCount;
     address[] public auctionedCDPsAddresses;
     mapping(address => AuctionedCDP) public auctionedCDPs;
@@ -27,14 +34,14 @@ contract CDPAuction is Ownable{
     CDPOracleInterface private _oracle;
     CDPRules private _rules;
 
-    function AddCDPToAudit(address _cdpAddr) onlyOwner external{
-        _openedCDPs.push(_cdpAddr);
+    function AddCDPToAudit(address _cdpAddr, uint256 _daiCount) onlyOwner external{
+        _openedCDPs.push(OpenedCDP(_cdpAddr, _daiCount, false));
     }
 
     function audit() public{
         uint256 course = getCourse();
         for(uint i = 0; i < _openedCDPsCount; i++){
-            CDPImpl cdp = CDPImpl(_openedCDPs[i]);
+            CDPImpl cdp = CDPImpl(_openedCDPs[i].cdpAddress);
             if(cdp.getCourse() > getCourse() - getCourse()/getCoeff())
                 auctionedCDPsAddresses.push(address(cdp));
                 auctionedCDPs[address(cdp)] = AuctionedCDP(cdp.getDAICount(), cdp.getCourse(), false);

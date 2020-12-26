@@ -1,0 +1,1 @@
+truffle run verify CDPAuction CDPFactory CDPImpl CDPOracleInterface CDPRules DAIToken --network rinkeby

@@ -12,13 +12,7 @@ contract CDPOracleInterface is Ownable{
 
     AggregatorV3Interface internal priceFeed;
     function getDollarRate() public view returns(int dollarRate){
-        (
-            uint80 roundID, 
-            int price,
-            uint startedAt,
-            uint timeStamp,
-            uint80 answeredInRound
-        ) = priceFeed.latestRoundData();
-        return price;
+        
+        return 3000;
     }
 }
