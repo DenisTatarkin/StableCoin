@@ -21,7 +21,7 @@ contract DAIToken is Ownable{
     totalSupply += _value;
   }
 
-  function balanceOf(address _owner) public returns (uint balance) {
+  function balanceOf(address _owner) public view returns (uint balance) {
     return balances[_owner];
   }
 
@@ -54,7 +54,7 @@ contract DAIToken is Ownable{
     return true;
   }
 
-  function allowance(address _owner, address _spender) public returns (uint remaining) {
+  function allowance(address _owner, address _spender) public view returns (uint remaining) {
     return allowed[_owner][_spender];
   }
 
