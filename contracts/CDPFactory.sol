@@ -16,7 +16,7 @@ contract CDPFactory {
     function createCDP(uint256 _daiCount) public returns (address){
         address cdp = address(new CDPImpl(msg.sender, _daiCount, daiAddress));
         dai.mint(cdp, _daiCount);
-        cdps.push(cdp);
+        cdps.push(cdp); // for testing!!!
         return cdp;
     }
 }

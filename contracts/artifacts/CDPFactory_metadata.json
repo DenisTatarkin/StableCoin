@@ -105,17 +105,17 @@
 	},
 	"sources": {
 		"localhost/contracts/CDPFactory.sol": {
-			"keccak256": "0xd80c4cf68776d068845b78504dabf0dd9fc14223a1f16c4d79e4c9c72de30894",
+			"keccak256": "0xa932bf9e6e35765bffafb48d246935cbffd9b136c53dfe29c01129d587dd6cc0",
 			"urls": [
-				"bzz-raw://8cc112f86656207fe79163ac175a937fa8e24fc177b070590638b69b1355c8c5",
-				"dweb:/ipfs/QmdiD7qUSPJHngUMhCZSEdR45j4m1Rk1xNRng9e1ahqCSn"
+				"bzz-raw://7a68c89a1045063c61408d2e132c7d657a889b14398d5079727a8d9a067006e5",
+				"dweb:/ipfs/QmZa2Ak2mHu4EPUzWMur53iY5BrV4CmpMR67vjcPkKhspA"
 			]
 		},
 		"localhost/contracts/CDPImpl.sol": {
-			"keccak256": "0xc25de78dfdf45c85b6bcd94e7a7665f50f7e4cb9cf9a9a97447f6f8258461539",
+			"keccak256": "0xd2c20929e1ed7a4d8c99204a4568caf041c7d12ced2df90496bb76072825439d",
 			"urls": [
-				"bzz-raw://ad99a510f5f667d115d1ac9ffaebb51ae2a642ed186f25b3be51f58ada8c58d2",
-				"dweb:/ipfs/QmdVLQ45fnPUeVRBK4hVdRBMAr1WaTZXcAEX5MWjUNde7n"
+				"bzz-raw://59bd575bc9dfb770744770773f8e586bc014fceb17cf5183b868b429c23c8757",
+				"dweb:/ipfs/QmengvYuAZr3vXGGPXQC53aGTvLge5L6ATT7qgPvvrdqoT"
 			]
 		},
 		"localhost/contracts/DAIToken.sol": {
