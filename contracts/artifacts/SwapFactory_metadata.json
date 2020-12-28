@@ -1,0 +1,294 @@
+{
+	"compiler": {
+		"version": "0.5.3+commit.10d17f24"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_salt",
+						"type": "uint256"
+					},
+					{
+						"name": "_logic",
+						"type": "address"
+					},
+					{
+						"name": "_admin",
+						"type": "address"
+					},
+					{
+						"name": "_data",
+						"type": "bytes"
+					},
+					{
+						"name": "_signature",
+						"type": "bytes"
+					}
+				],
+				"name": "getSigner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_salt",
+						"type": "uint256"
+					},
+					{
+						"name": "_logic",
+						"type": "address"
+					},
+					{
+						"name": "_admin",
+						"type": "address"
+					},
+					{
+						"name": "_data",
+						"type": "bytes"
+					},
+					{
+						"name": "_signature",
+						"type": "bytes"
+					}
+				],
+				"name": "deploySigned",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "count",
+						"type": "uint256"
+					}
+				],
+				"name": "createSwap",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_salt",
+						"type": "uint256"
+					},
+					{
+						"name": "_logic",
+						"type": "address"
+					},
+					{
+						"name": "_admin",
+						"type": "address"
+					},
+					{
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "deploy",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_salt",
+						"type": "uint256"
+					},
+					{
+						"name": "_sender",
+						"type": "address"
+					}
+				],
+				"name": "getDeploymentAddress",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "implementationContract",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_logic",
+						"type": "address"
+					},
+					{
+						"name": "_data",
+						"type": "bytes"
+					}
+				],
+				"name": "deployMinimal",
+				"outputs": [
+					{
+						"name": "proxy",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"name": "_implementationContract",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "proxy",
+						"type": "address"
+					}
+				],
+				"name": "ProxyCreated",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/contracts/SwapFactory.sol": "SwapFactory"
+		},
+		"evmVersion": "constantinople",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@openzeppelin/upgrades/contracts/cryptography/ECDSA.sol": {
+			"keccak256": "0x0ca3de3dc8aac4114ff0b123fcabef91901de1a30938f3e954846ad99909b972",
+			"urls": [
+				"bzzr://7905b8ce67a4d4b0744f0f08abb7c4ec1762b18ee39ee7d64fc73beb0da0db19"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/upgradeability/BaseAdminUpgradeabilityProxy.sol": {
+			"keccak256": "0xbf8ee1cf63a430a3eb8b39a9145d0d133400b8db06fa9fd33056597f7d8ceb25",
+			"urls": [
+				"bzzr://f9563fda28096fae1396dce1f6eb5f5afc664677887071076b7e4b0e6d06bd56"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/upgradeability/BaseUpgradeabilityProxy.sol": {
+			"keccak256": "0x1b37f808dc0a45976ad23aa53908c485a74a4d9fbd03066a5ab399c46436e570",
+			"urls": [
+				"bzzr://c309686ae393a7474d0af3a7237b5ef3c452d9f78756d40caeeaad4caf2c2efb"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/upgradeability/InitializableAdminUpgradeabilityProxy.sol": {
+			"keccak256": "0x91f2b663c89b940dce6dbd00f5e7bf326cdf02d1da4ddbcb7e64b313e60d9afc",
+			"urls": [
+				"bzzr://572ab82efb4e71dbb88e992eedc363f72290eb2fdc1081023e66680d2a69ef07"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/upgradeability/InitializableUpgradeabilityProxy.sol": {
+			"keccak256": "0x6b84a0236a899ba5aa673ea34d5efa1f93dba461e13d8799f51a9f7b64b59f4f",
+			"urls": [
+				"bzzr://bc421cdd1f5c8313a0eaf237c9110d187674955d3eacbc187bddeda82a664053"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/upgradeability/Proxy.sol": {
+			"keccak256": "0xd8074ae5fa7ee6384ca8196a896612fb044bbf4ff4b7336d03cd97845000ac21",
+			"urls": [
+				"bzzr://a94275c7d409e80fa5cf6f31c8a6b97cf85c231de40585d42ae98bab426562c6"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/upgradeability/ProxyFactory.sol": {
+			"keccak256": "0xf4932759c88b26dd0b37a7ba960c44f7a4e817127846befb4b4fb72ee8f2c573",
+			"urls": [
+				"bzzr://6b7fb7e0bdbbbcbf9cbd110fc19a23bfa4eeb583c767b66614124f34f2135b42"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/upgradeability/UpgradeabilityProxy.sol": {
+			"keccak256": "0xb02c6349ba01df9902857b6058f92b37f13187775cce9da74f6f28410205445b",
+			"urls": [
+				"bzzr://2a95f00787c16351caad43b25048cc40eff9f140c4b1284fbf502dfd9b708489"
+			]
+		},
+		"@openzeppelin/upgrades/contracts/utils/Address.sol": {
+			"keccak256": "0x7be7f8e4c08bc70ff9815e3f11c569f42aa3c447b5bc61fd75fb5cec97f63a9f",
+			"urls": [
+				"bzzr://b6a2c355fa7aadb6c25e8691e98abc26d3429afa58eb761af4ab5377eee30709"
+			]
+		},
+		"localhost/contracts/SwapFactory.sol": {
+			"keccak256": "0x70c8fbd3102af398af7b14cd43d2567f225868d5e644fd95b56204e1353fc7f2",
+			"urls": [
+				"bzzr://73d9c8b4842b53f0a777186d70d3e4ec74b41e208d5ebf3ad8014b4bb00e4aa6"
+			]
+		}
+	},
+	"version": 1
+}

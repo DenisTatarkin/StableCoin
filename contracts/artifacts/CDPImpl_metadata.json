@@ -1,0 +1,99 @@
+{
+	"compiler": {
+		"version": "0.5.17+commit.d19bba13"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_borrower",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_daiCount",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "borrower",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "daiCount",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {}
+		},
+		"userdoc": {
+			"methods": {}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/contracts/CDPImpl.sol": "CDPImpl"
+		},
+		"evmVersion": "constantinople",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"localhost/contracts/CDPImpl.sol": {
+			"keccak256": "0xe27a12412a8606fbe1ce975098ce803bbed927daaa1940e7c68683b2d91cb03f",
+			"urls": [
+				"bzz-raw://a1b2798518f35c373015aa0c2dd4d160667eb0ee65a4c1684ddaae1b4067a309",
+				"dweb:/ipfs/QmUmHKjzxo3FSYXKQee1maRv9MjaNKtGzbdEUYssBaamSf"
+			]
+		},
+		"localhost/contracts/DAIToken.sol": {
+			"keccak256": "0x3f049c8d541ad25261b37cb5a9846f9101ed7e7e6f7dcc05adb9434a70578c88",
+			"urls": [
+				"bzz-raw://b80dfe4419ef14eb1108b38435ac21cadd7858ac2968408d42de1bce3af8a73f",
+				"dweb:/ipfs/QmT2bYH7UFJJzcwpjRRYnVbZkDnkoZzpjna5AgR1agSZaw"
+			]
+		},
+		"localhost/contracts/Ownable.sol": {
+			"keccak256": "0xb677f721872a791dbdfe4df9d1550f1662d9a69b7f42580e8f3a37703c2a2960",
+			"urls": [
+				"bzz-raw://285625bc3dfc94014f864d2e417ff769fcffae7c88b50a756fd557cc0e4b4915",
+				"dweb:/ipfs/QmTNwTcGgTYezSEjDJ26s5ZRuwMPTAhL7vGtQVp1oN3Fw3"
+			]
+		}
+	},
+	"version": 1
+}
