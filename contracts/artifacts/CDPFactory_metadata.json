@@ -6,6 +6,33 @@
 	"output": {
 		"abi": [
 			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "cdps",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"constant": false,
 				"inputs": [
 					{
@@ -24,6 +51,21 @@
 				],
 				"payable": false,
 				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "daiAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
 				"type": "function"
 			},
 			{
@@ -62,25 +104,18 @@
 		"remappings": []
 	},
 	"sources": {
-		"@openzeppelin/upgrades/contracts/Initializable.sol": {
-			"keccak256": "0x9bfec92e36234ecc99b5d37230acb6cd1f99560233753162204104a4897e8721",
-			"urls": [
-				"bzz-raw://5cf7c208583d4d046d75bd99f5507412ab01cce9dd9f802ce9768a416d93ea2f",
-				"dweb:/ipfs/QmcQS1BBMPpVEkXP3qzwSjxHNrqDek8YeR7xbVWDC9ApC7"
-			]
-		},
 		"localhost/contracts/CDPFactory.sol": {
-			"keccak256": "0xdab21b1bc65fd80300b54ffd7f3008dff24f94231f25c3066f10499d54611604",
+			"keccak256": "0xd80c4cf68776d068845b78504dabf0dd9fc14223a1f16c4d79e4c9c72de30894",
 			"urls": [
-				"bzz-raw://568ae00a0b58892c37d8099859409374b82f75c9c9a59af28ab2a5fdb1a29c45",
-				"dweb:/ipfs/QmdprLjDdYv4cQGtLqYon7RwYCArakRJwgnnuHCFUxGgtw"
+				"bzz-raw://8cc112f86656207fe79163ac175a937fa8e24fc177b070590638b69b1355c8c5",
+				"dweb:/ipfs/QmdiD7qUSPJHngUMhCZSEdR45j4m1Rk1xNRng9e1ahqCSn"
 			]
 		},
 		"localhost/contracts/CDPImpl.sol": {
-			"keccak256": "0xd6547646ee1802fcb14e55675172fad1138e88b78b1fc3f3682736c3fc34d00b",
+			"keccak256": "0xc25de78dfdf45c85b6bcd94e7a7665f50f7e4cb9cf9a9a97447f6f8258461539",
 			"urls": [
-				"bzz-raw://a987fdaf5a7a143c8583b19fcc9b3a417c1daa1caff737418085d59821261af7",
-				"dweb:/ipfs/QmXAFpPGkd5NQ523RdFNu7vetjW1pEzF2grHztdN9ricde"
+				"bzz-raw://ad99a510f5f667d115d1ac9ffaebb51ae2a642ed186f25b3be51f58ada8c58d2",
+				"dweb:/ipfs/QmdVLQ45fnPUeVRBK4hVdRBMAr1WaTZXcAEX5MWjUNde7n"
 			]
 		},
 		"localhost/contracts/DAIToken.sol": {

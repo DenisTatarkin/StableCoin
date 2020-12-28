@@ -16,6 +16,11 @@
 						"internalType": "uint256",
 						"name": "_daiCount",
 						"type": "uint256"
+					},
+					{
+						"internalType": "address",
+						"name": "_daiAddress",
+						"type": "address"
 					}
 				],
 				"payable": false,
@@ -26,6 +31,21 @@
 				"constant": true,
 				"inputs": [],
 				"name": "borrower",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "daiAddress",
 				"outputs": [
 					{
 						"internalType": "address",
@@ -51,6 +71,30 @@
 				"payable": false,
 				"stateMutability": "view",
 				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "isOpened",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "open",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -74,10 +118,10 @@
 	},
 	"sources": {
 		"localhost/contracts/CDPImpl.sol": {
-			"keccak256": "0xe27a12412a8606fbe1ce975098ce803bbed927daaa1940e7c68683b2d91cb03f",
+			"keccak256": "0xc25de78dfdf45c85b6bcd94e7a7665f50f7e4cb9cf9a9a97447f6f8258461539",
 			"urls": [
-				"bzz-raw://a1b2798518f35c373015aa0c2dd4d160667eb0ee65a4c1684ddaae1b4067a309",
-				"dweb:/ipfs/QmUmHKjzxo3FSYXKQee1maRv9MjaNKtGzbdEUYssBaamSf"
+				"bzz-raw://ad99a510f5f667d115d1ac9ffaebb51ae2a642ed186f25b3be51f58ada8c58d2",
+				"dweb:/ipfs/QmdVLQ45fnPUeVRBK4hVdRBMAr1WaTZXcAEX5MWjUNde7n"
 			]
 		},
 		"localhost/contracts/DAIToken.sol": {
