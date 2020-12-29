@@ -11,6 +11,11 @@
 						"internalType": "address",
 						"name": "_daiAddress",
 						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_oracleAddress",
+						"type": "address"
 					}
 				],
 				"payable": false,
@@ -264,17 +269,24 @@
 	},
 	"sources": {
 		"localhost/contracts/CDPAuction.sol": {
-			"keccak256": "0xcf2e5ce7fceeb032824ebb5789a8dc70b26bf9be4a12d60431c2cfe51557d34d",
+			"keccak256": "0xc3b364a0edb984d7d607a5231e6604a255281cac74500a33a830b0e1dcaf6e5a",
 			"urls": [
-				"bzz-raw://735296808d5764c86d44495e7bb2b32781b51373b0a5f43064bad34b5db1f546",
-				"dweb:/ipfs/QmUncDTgYLbpShifnQJopwUAQUsyXySeaaqvfoStUTVVEc"
+				"bzz-raw://44ab28e00871ea6f50f95c96e9931d5055bdcf8436fccdd22041cfcaa35bcc11",
+				"dweb:/ipfs/QmWxi9jJ2y6VjaK7wc2sabJwftUdVp5Yg3e3YLS8PEPC3T"
 			]
 		},
 		"localhost/contracts/CDPImpl.sol": {
-			"keccak256": "0xec091aef8b90e433a162a54cb5a51de6f56e3524251cc8c35bd7004e7e49fe37",
+			"keccak256": "0x6a620c20df5171e92e2a6bfd961715408b66ace80a7d2d15fa815a2837944732",
 			"urls": [
-				"bzz-raw://5bbfcec7cb96376c2d162d64e26fa03e1a18ad4a6827013b72ba2c5b48e0dd8d",
-				"dweb:/ipfs/QmZBdsNzpP2qPPWz2KEyrAYpxmpq8zfUboz4jzSBdiqCKs"
+				"bzz-raw://1841e7900d5106a2ba2b4c8145e38a197f4674a02592a1ce8415802f0580345f",
+				"dweb:/ipfs/Qmcb7cNsw9LVT9RZ59Wm1DGWofs5jhxAcC3pdLHwfZ7kJ6"
+			]
+		},
+		"localhost/contracts/CourseOracle.sol": {
+			"keccak256": "0xc3ecdec170be0141e377617ca55d7bc31f300f15e556cbe33076065ffbfd5c34",
+			"urls": [
+				"bzz-raw://70d8639492757bcf3720a6b41d9d89119221e96c5b589a50581ad625aa839dc3",
+				"dweb:/ipfs/QmQuT1gjWxFJMYqeioVfHQrZwSmYhcFzCcwqAj8Wnd5t4P"
 			]
 		},
 		"localhost/contracts/DAIToken.sol": {

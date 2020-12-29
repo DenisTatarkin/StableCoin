@@ -1,10 +1,12 @@
 pragma solidity ^0.5.1;
 import './Ownable.sol';
 import './DAIToken.sol';
+import './CourseOracle.sol';
 
 contract CDPImpl{
 
-     constructor(address payable _borrower, uint256 _daiCount, address _daiAddress, address _auctionAddress) public {
+     constructor(address payable _borrower, uint256 _daiCount, address _daiAddress, 
+                 address _auctionAddress, address _oracleAddress) public {
          borrower = _borrower;
          daiCount = _daiCount;
          daiAddress = _daiAddress;
@@ -13,11 +15,13 @@ contract CDPImpl{
          isClosed = false;
          deposit = calculateCourse(_daiCount);
          auctionAddress = _auctionAddress;
+         oracle = CourseOracle(_oracleAddress);
     }
 
     address payable public borrower;
     uint256 public daiCount;
     DAIToken private dai;
+    CourseOracle private oracle;
     address public daiAddress;
     bool public isOpened;
     bool public isClosed;
@@ -49,8 +53,8 @@ contract CDPImpl{
         if(!dai.transferFrom(borrower, address(this), _daiCount))
             return;
         daiCount -= _daiCount;
-        borrower.transfer(_daiCount * (1000000000000000000 / 5000));
-        deposit -= _daiCount * (1000000000000000000 / 5000);
+        borrower.transfer(_daiCount * (1000000000000000000 / uint256(oracle.ETH_USD())));
+        deposit -= _daiCount * (1000000000000000000 / uint256(oracle.ETH_USD()));
     }
     
     function closeByAuction(address payable _payer) external{
@@ -59,7 +63,7 @@ contract CDPImpl{
     }
     
     function calculateCourse(uint256 _daiCount) private returns (uint256){
-        uint256 recounted = _daiCount * uint256(1000000000000000000 / 5000); // 1 eth = 5000$ => 1000000000000000000 wei = 5000$ => x / dai = 1000000000000000000 / 5000$ => x = dai * (1000000000000000000 / 5000$)
+        uint256 recounted = _daiCount * uint256(1000000000000000000 / uint256(oracle.ETH_USD())); // 1 eth = 5000$ => 1000000000000000000 wei = 5000$ => x / dai = 1000000000000000000 / 5000$ => x = dai * (1000000000000000000 / 5000$)
         return recounted;
     }
     
