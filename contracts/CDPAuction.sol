@@ -23,10 +23,8 @@ contract CDPAuction is Ownable {
     OpenedCDP[] public auctionedCDPs;
     mapping(address => bool) private isAuctioned;
     uint256 private cdpsCount;
-    DAIToken private dai;
-    CourseOracle private oracle;
-    
-    address[] public testcdps; //for testing!!!
+    CourseOracle oracle;
+    DAIToken dai;
     
     function addCDP(address _cdpAddress) external onlyOwner{
         CDPImpl cdp = CDPImpl(_cdpAddress);
@@ -38,7 +36,6 @@ contract CDPAuction is Ownable {
     function audit() external {
         for(uint i = 0; i < cdpsCount; i++){
             CDPImpl cdp = CDPImpl(openedCDPs[i].cdpAddress);
-            testcdps.push(address(cdp));
             if(!cdp.isOpened())
                 continue;
             uint256 calculatedCourse = calculateCourse(cdp.daiCount());
