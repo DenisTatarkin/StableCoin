@@ -4,14 +4,10 @@
     <list default="true" id="cc7c4d30-0672-4360-966d-7d9e3f9973aa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/../contracts/CDPFactory.sol" beforeDir="false" afterPath="$PROJECT_DIR$/../contracts/CDPFactory.sol" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../contracts/CDPImpl.sol" beforeDir="false" afterPath="$PROJECT_DIR$/../contracts/CDPImpl.sol" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../contracts/SwapFactory.sol" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../contracts/SwapImpl.sol" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../contracts/artifacts/CDPFactory.json" beforeDir="false" afterPath="$PROJECT_DIR$/../contracts/artifacts/CDPFactory.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../contracts/artifacts/CDPFactory_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../contracts/artifacts/CDPFactory_metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../contracts/artifacts/CDPImpl.json" beforeDir="false" afterPath="$PROJECT_DIR$/../contracts/artifacts/CDPImpl.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../contracts/artifacts/CDPImpl_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/../contracts/artifacts/CDPImpl_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auction_audit.js" beforeDir="false" afterPath="$PROJECT_DIR$/auction_audit.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +47,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608900433932</updated>
       <workItem from="1608900435304" duration="1453000" />
-      <workItem from="1609197489045" duration="1117000" />
+      <workItem from="1609197489045" duration="1487000" />
     </task>
     <servers />
   </component>

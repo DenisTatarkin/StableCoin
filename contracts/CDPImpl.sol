@@ -47,10 +47,12 @@ contract CDPImpl{
         if(!dai.transferFrom(borrower, address(this), _daiCount))
             return;
         daiCount -= _daiCount;
+        borrower.transfer(_daiCount * (1000000000000000000 / 5000));
+        deposit -= _daiCount * (1000000000000000000 / 5000);
     }
     
     function calculateCourse(uint256 _daiCount) private returns (uint256){
-        uint256 recounted = _daiCount * (1000000000000000000 / 5000); // 1 eth = 5000$ => 1000000000000000000 wei = 5000$ => x / dai = 1000000000000000000 / 5000$ => x = dai * (1000000000000000000 / 5000$)
+        uint256 recounted = _daiCount * uint256(1000000000000000000 / 5000); // 1 eth = 5000$ => 1000000000000000000 wei = 5000$ => x / dai = 1000000000000000000 / 5000$ => x = dai * (1000000000000000000 / 5000$)
         return recounted;
     }
     

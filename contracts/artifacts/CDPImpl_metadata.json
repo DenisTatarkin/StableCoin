@@ -172,10 +172,10 @@
 	},
 	"sources": {
 		"localhost/contracts/CDPImpl.sol": {
-			"keccak256": "0x0835d27d92e9429f8bfb124e4e7d5a3be8a92823e512a9559bfda3cf5a2f5849",
+			"keccak256": "0xa9a8d3e31d7c5fcf3ae80e37c0906400cfc462255c4b229f756c82a916428926",
 			"urls": [
-				"bzz-raw://87e281a04f69c984af9c0db57e54c456bb92110fcfe31e4347db08934f63e546",
-				"dweb:/ipfs/QmPnqc9EPQzQiqwkRKkwgDRtgHUnZUbosao7tyeJrfK1Ki"
+				"bzz-raw://6e9d4867f99ca9586ca05f8c90a56e1a72f2b8cf224e01686d44d18d303c1261",
+				"dweb:/ipfs/QmPAJXFu21Hp8mxsktecJCWTdWGRVpWmjk3DTcz5GqJZ4y"
 			]
 		},
 		"localhost/contracts/DAIToken.sol": {

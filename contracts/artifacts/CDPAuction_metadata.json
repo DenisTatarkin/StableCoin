@@ -1,0 +1,275 @@
+{
+	"compiler": {
+		"version": "0.5.17+commit.d19bba13"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_cdpAddress",
+						"type": "address"
+					}
+				],
+				"name": "addCDP",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "auctionedCDPs",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "cdpAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "daiCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deposit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isClosed",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "audit",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "openedCDPs",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "cdpAddress",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "daiCount",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "deposit",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "isClosed",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "testcdps",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"isOwner()": {
+					"return": "true if `msg.sender` is the owner of the contract."
+				},
+				"owner()": {
+					"return": "the address of the owner."
+				},
+				"renounceOwnership()": {
+					"details": "Allows the current owner to relinquish control of the contract."
+				},
+				"transferOwnership(address)": {
+					"details": "Allows the current owner to transfer control of the contract to a newOwner.",
+					"params": {
+						"newOwner": "The address to transfer ownership to."
+					}
+				}
+			}
+		},
+		"userdoc": {
+			"methods": {
+				"renounceOwnership()": {
+					"notice": "Renouncing to ownership will leave the contract without an owner. It will not be possible to call the functions with the `onlyOwner` modifier anymore."
+				}
+			}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"localhost/contracts/CDPAuction.sol": "CDPAuction"
+		},
+		"evmVersion": "constantinople",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"localhost/contracts/CDPAuction.sol": {
+			"keccak256": "0x64c5080a3a9137ddb912769e0d9d466b9666dc0d1724c53cacc724c17924648a",
+			"urls": [
+				"bzz-raw://13dfeb0aad9d7b4de932a9b6b6d14e2e69985916688ce17a81f60ebe8754df23",
+				"dweb:/ipfs/QmUCMfLBmDqqkiJqxLSVD3y5BZUmHA9MoEPpYpcNV1SrNJ"
+			]
+		},
+		"localhost/contracts/CDPImpl.sol": {
+			"keccak256": "0xa9a8d3e31d7c5fcf3ae80e37c0906400cfc462255c4b229f756c82a916428926",
+			"urls": [
+				"bzz-raw://6e9d4867f99ca9586ca05f8c90a56e1a72f2b8cf224e01686d44d18d303c1261",
+				"dweb:/ipfs/QmPAJXFu21Hp8mxsktecJCWTdWGRVpWmjk3DTcz5GqJZ4y"
+			]
+		},
+		"localhost/contracts/DAIToken.sol": {
+			"keccak256": "0x6d132553d5fe6665ee54551845ed0717552a9218742acb81294db90e63c3d2ed",
+			"urls": [
+				"bzz-raw://8bbbfac5e0fab9c5157ce26b3e38b0a44a718df9d9a62f0f9c35cfd0f30193ef",
+				"dweb:/ipfs/QmcymkaSV9BGq9cxFWXvF1YC8f4L8U6aMzFag58TNy9bk6"
+			]
+		},
+		"localhost/contracts/Ownable.sol": {
+			"keccak256": "0xb677f721872a791dbdfe4df9d1550f1662d9a69b7f42580e8f3a37703c2a2960",
+			"urls": [
+				"bzz-raw://285625bc3dfc94014f864d2e417ff769fcffae7c88b50a756fd557cc0e4b4915",
+				"dweb:/ipfs/QmTNwTcGgTYezSEjDJ26s5ZRuwMPTAhL7vGtQVp1oN3Fw3"
+			]
+		}
+	},
+	"version": 1
+}
