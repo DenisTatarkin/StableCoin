@@ -1,10 +1,12 @@
 pragma solidity ^0.5.1;
 import './Ownable.sol';
 import './CDPImpl.sol';
+import './DAIToken.sol';
 
 contract CDPAuction is Ownable {
     
-    constructor() public {
+    constructor(address _daiAddress) public {
+        dai = DAIToken(_daiAddress);
         cdpsCount = 0;
     }
     
@@ -17,8 +19,9 @@ contract CDPAuction is Ownable {
     
     OpenedCDP[] public openedCDPs;
     OpenedCDP[] public auctionedCDPs;
-    mapping(address => bool) private isAdded;
+    mapping(address => bool) private isAuctioned;
     uint256 private cdpsCount;
+    DAIToken private dai;
     
     address[] public testcdps; //for testing!!!
     
@@ -36,9 +39,19 @@ contract CDPAuction is Ownable {
             if(!cdp.isOpened())
                 continue;
             uint256 calculatedCourse = calculateCourse(cdp.daiCount());
-            if(cdp.deposit() - uint256(cdp.deposit() / uint256(4)) < calculatedCourse)
+            if(cdp.deposit() - uint256(cdp.deposit() / uint256(4)) < calculatedCourse){
                 auctionedCDPs.push(OpenedCDP(address(cdp), cdp.daiCount(), cdp.deposit(), false));
+                isAuctioned[address(cdp)] = true;
+            }
         }
+    }
+    
+    function buyCDP(address _cdpAddress) external {
+        CDPImpl cdp = CDPImpl(_cdpAddress);
+        require(isAuctioned[_cdpAddress]);
+        require(!cdp.isClosed());
+        dai.transferFrom(msg.sender, address(this), cdp.daiCount());
+        cdp.closeByAuction(msg.sender);
     }
     
      function calculateCourse(uint256 _daiCount) private returns (uint256){

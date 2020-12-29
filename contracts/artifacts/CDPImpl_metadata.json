@@ -21,6 +21,11 @@
 						"internalType": "address",
 						"name": "_daiAddress",
 						"type": "address"
+					},
+					{
+						"internalType": "address",
+						"name": "_auctionAddress",
+						"type": "address"
 					}
 				],
 				"payable": false,
@@ -46,6 +51,21 @@
 				"constant": false,
 				"inputs": [],
 				"name": "close",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "_payer",
+						"type": "address"
+					}
+				],
+				"name": "closeByAuction",
 				"outputs": [],
 				"payable": false,
 				"stateMutability": "nonpayable",
@@ -172,17 +192,17 @@
 	},
 	"sources": {
 		"localhost/contracts/CDPImpl.sol": {
-			"keccak256": "0xa9a8d3e31d7c5fcf3ae80e37c0906400cfc462255c4b229f756c82a916428926",
+			"keccak256": "0xec091aef8b90e433a162a54cb5a51de6f56e3524251cc8c35bd7004e7e49fe37",
 			"urls": [
-				"bzz-raw://6e9d4867f99ca9586ca05f8c90a56e1a72f2b8cf224e01686d44d18d303c1261",
-				"dweb:/ipfs/QmPAJXFu21Hp8mxsktecJCWTdWGRVpWmjk3DTcz5GqJZ4y"
+				"bzz-raw://5bbfcec7cb96376c2d162d64e26fa03e1a18ad4a6827013b72ba2c5b48e0dd8d",
+				"dweb:/ipfs/QmZBdsNzpP2qPPWz2KEyrAYpxmpq8zfUboz4jzSBdiqCKs"
 			]
 		},
 		"localhost/contracts/DAIToken.sol": {
-			"keccak256": "0x6d132553d5fe6665ee54551845ed0717552a9218742acb81294db90e63c3d2ed",
+			"keccak256": "0x7bb404e00b2e8c4fdb77ab56200db0e41aec1894b976117d2a118ffd0eab7a18",
 			"urls": [
-				"bzz-raw://8bbbfac5e0fab9c5157ce26b3e38b0a44a718df9d9a62f0f9c35cfd0f30193ef",
-				"dweb:/ipfs/QmcymkaSV9BGq9cxFWXvF1YC8f4L8U6aMzFag58TNy9bk6"
+				"bzz-raw://8fdeb34ed2172ddfdfcf33a7b22629fc45c070cb4bc0139a9c8a51bdb435aa37",
+				"dweb:/ipfs/QmYXZZjgU87rFW3tpC8KpaVdUEaoJrUSRdaRbBhRdUiKgG"
 			]
 		},
 		"localhost/contracts/Ownable.sol": {

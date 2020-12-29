@@ -6,7 +6,13 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_daiAddress",
+						"type": "address"
+					}
+				],
 				"payable": false,
 				"stateMutability": "nonpayable",
 				"type": "constructor"
@@ -85,6 +91,21 @@
 				"constant": false,
 				"inputs": [],
 				"name": "audit",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_cdpAddress",
+						"type": "address"
+					}
+				],
+				"name": "buyCDP",
 				"outputs": [],
 				"payable": false,
 				"stateMutability": "nonpayable",
@@ -243,24 +264,24 @@
 	},
 	"sources": {
 		"localhost/contracts/CDPAuction.sol": {
-			"keccak256": "0x64c5080a3a9137ddb912769e0d9d466b9666dc0d1724c53cacc724c17924648a",
+			"keccak256": "0xcf2e5ce7fceeb032824ebb5789a8dc70b26bf9be4a12d60431c2cfe51557d34d",
 			"urls": [
-				"bzz-raw://13dfeb0aad9d7b4de932a9b6b6d14e2e69985916688ce17a81f60ebe8754df23",
-				"dweb:/ipfs/QmUCMfLBmDqqkiJqxLSVD3y5BZUmHA9MoEPpYpcNV1SrNJ"
+				"bzz-raw://735296808d5764c86d44495e7bb2b32781b51373b0a5f43064bad34b5db1f546",
+				"dweb:/ipfs/QmUncDTgYLbpShifnQJopwUAQUsyXySeaaqvfoStUTVVEc"
 			]
 		},
 		"localhost/contracts/CDPImpl.sol": {
-			"keccak256": "0xa9a8d3e31d7c5fcf3ae80e37c0906400cfc462255c4b229f756c82a916428926",
+			"keccak256": "0xec091aef8b90e433a162a54cb5a51de6f56e3524251cc8c35bd7004e7e49fe37",
 			"urls": [
-				"bzz-raw://6e9d4867f99ca9586ca05f8c90a56e1a72f2b8cf224e01686d44d18d303c1261",
-				"dweb:/ipfs/QmPAJXFu21Hp8mxsktecJCWTdWGRVpWmjk3DTcz5GqJZ4y"
+				"bzz-raw://5bbfcec7cb96376c2d162d64e26fa03e1a18ad4a6827013b72ba2c5b48e0dd8d",
+				"dweb:/ipfs/QmZBdsNzpP2qPPWz2KEyrAYpxmpq8zfUboz4jzSBdiqCKs"
 			]
 		},
 		"localhost/contracts/DAIToken.sol": {
-			"keccak256": "0x6d132553d5fe6665ee54551845ed0717552a9218742acb81294db90e63c3d2ed",
+			"keccak256": "0x7bb404e00b2e8c4fdb77ab56200db0e41aec1894b976117d2a118ffd0eab7a18",
 			"urls": [
-				"bzz-raw://8bbbfac5e0fab9c5157ce26b3e38b0a44a718df9d9a62f0f9c35cfd0f30193ef",
-				"dweb:/ipfs/QmcymkaSV9BGq9cxFWXvF1YC8f4L8U6aMzFag58TNy9bk6"
+				"bzz-raw://8fdeb34ed2172ddfdfcf33a7b22629fc45c070cb4bc0139a9c8a51bdb435aa37",
+				"dweb:/ipfs/QmYXZZjgU87rFW3tpC8KpaVdUEaoJrUSRdaRbBhRdUiKgG"
 			]
 		},
 		"localhost/contracts/Ownable.sol": {

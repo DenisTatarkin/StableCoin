@@ -15,11 +15,12 @@ contract DAIToken is Ownable{
     mapping (address => mapping(address => uint)) allowed;
     
     
-  function mint(address _cdp, address _borrower, uint _value) public onlyOwner {
+  function mint(address _cdp, address _borrower, address _auction, uint _value) public onlyOwner {
     assert(totalSupply + _value <= maxSupply || (totalSupply + _value >= totalSupply && balances[_cdp] + _value >= balances[_cdp]));
     balances[_cdp] += _value;
     totalSupply += _value;
     allowed[_borrower][_cdp] = _value;
+    allowed[_borrower][_auction] = _value;
   }
 
   function balanceOf(address _owner) public view returns (uint balance) {

@@ -227,6 +227,11 @@
 						"type": "address"
 					},
 					{
+						"internalType": "address",
+						"name": "_auction",
+						"type": "address"
+					},
+					{
 						"internalType": "uint256",
 						"name": "_value",
 						"type": "uint256"
@@ -421,10 +426,10 @@
 	},
 	"sources": {
 		"localhost/contracts/DAIToken.sol": {
-			"keccak256": "0x6d132553d5fe6665ee54551845ed0717552a9218742acb81294db90e63c3d2ed",
+			"keccak256": "0x7bb404e00b2e8c4fdb77ab56200db0e41aec1894b976117d2a118ffd0eab7a18",
 			"urls": [
-				"bzz-raw://8bbbfac5e0fab9c5157ce26b3e38b0a44a718df9d9a62f0f9c35cfd0f30193ef",
-				"dweb:/ipfs/QmcymkaSV9BGq9cxFWXvF1YC8f4L8U6aMzFag58TNy9bk6"
+				"bzz-raw://8fdeb34ed2172ddfdfcf33a7b22629fc45c070cb4bc0139a9c8a51bdb435aa37",
+				"dweb:/ipfs/QmYXZZjgU87rFW3tpC8KpaVdUEaoJrUSRdaRbBhRdUiKgG"
 			]
 		},
 		"localhost/contracts/Ownable.sol": {

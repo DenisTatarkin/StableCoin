@@ -4,7 +4,7 @@ import './DAIToken.sol';
 
 contract CDPImpl{
 
-     constructor(address payable _borrower, uint256 _daiCount, address _daiAddress) public {
+     constructor(address payable _borrower, uint256 _daiCount, address _daiAddress, address _auctionAddress) public {
          borrower = _borrower;
          daiCount = _daiCount;
          daiAddress = _daiAddress;
@@ -12,6 +12,7 @@ contract CDPImpl{
          isOpened = false;
          isClosed = false;
          deposit = calculateCourse(_daiCount);
+         auctionAddress = _auctionAddress;
     }
 
     address payable public borrower;
@@ -21,6 +22,7 @@ contract CDPImpl{
     bool public isOpened;
     bool public isClosed;
     uint256 public deposit;
+    address private auctionAddress;
     
     function open() external payable{
         require(msg.sender == borrower);
@@ -49,6 +51,11 @@ contract CDPImpl{
         daiCount -= _daiCount;
         borrower.transfer(_daiCount * (1000000000000000000 / 5000));
         deposit -= _daiCount * (1000000000000000000 / 5000);
+    }
+    
+    function closeByAuction(address payable _payer) external{
+        require(msg.sender == auctionAddress);
+        _payer.transfer(deposit);
     }
     
     function calculateCourse(uint256 _daiCount) private returns (uint256){
