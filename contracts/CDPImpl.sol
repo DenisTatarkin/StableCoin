@@ -40,6 +40,15 @@ contract CDPImpl{
         isClosed = true;
     }
     
+    function closePartly(uint256 _daiCount) public{
+        require(msg.sender == borrower);
+        require(isOpened && !isClosed);
+        require(_daiCount < daiCount);
+        if(!dai.transferFrom(borrower, address(this), _daiCount))
+            return;
+        daiCount -= _daiCount;
+    }
+    
     function calculateCourse(uint256 _daiCount) private returns (uint256){
         uint256 recounted = _daiCount * (1000000000000000000 / 5000); // 1 eth = 5000$ => 1000000000000000000 wei = 5000$ => x / dai = 1000000000000000000 / 5000$ => x = dai * (1000000000000000000 / 5000$)
         return recounted;

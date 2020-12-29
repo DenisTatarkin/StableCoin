@@ -112,10 +112,10 @@
 			]
 		},
 		"localhost/contracts/CDPImpl.sol": {
-			"keccak256": "0x624bde7e299be6b348b042ccfdcdcd378c71607a42f4c6cf390472c18aaefc63",
+			"keccak256": "0x0835d27d92e9429f8bfb124e4e7d5a3be8a92823e512a9559bfda3cf5a2f5849",
 			"urls": [
-				"bzz-raw://1b0890e688fdec9837afbe9908a9719c38689be6ae5dc633716893d587c9db60",
-				"dweb:/ipfs/QmSN6rBnFqxYyhfcTjK2PcTzRnMLB3PjTq3Rfkqa9eDQ5d"
+				"bzz-raw://87e281a04f69c984af9c0db57e54c456bb92110fcfe31e4347db08934f63e546",
+				"dweb:/ipfs/QmPnqc9EPQzQiqwkRKkwgDRtgHUnZUbosao7tyeJrfK1Ki"
 			]
 		},
 		"localhost/contracts/DAIToken.sol": {
