@@ -8,7 +8,7 @@
 			{
 				"inputs": [
 					{
-						"internalType": "address",
+						"internalType": "address payable",
 						"name": "_borrower",
 						"type": "address"
 					},
@@ -33,13 +33,22 @@
 				"name": "borrower",
 				"outputs": [
 					{
-						"internalType": "address",
+						"internalType": "address payable",
 						"name": "",
 						"type": "address"
 					}
 				],
 				"payable": false,
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "close",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -81,6 +90,21 @@
 						"internalType": "uint256",
 						"name": "",
 						"type": "uint256"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "isClosed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
 					}
 				],
 				"payable": false,
@@ -133,17 +157,17 @@
 	},
 	"sources": {
 		"localhost/contracts/CDPImpl.sol": {
-			"keccak256": "0xd2c20929e1ed7a4d8c99204a4568caf041c7d12ced2df90496bb76072825439d",
+			"keccak256": "0x624bde7e299be6b348b042ccfdcdcd378c71607a42f4c6cf390472c18aaefc63",
 			"urls": [
-				"bzz-raw://59bd575bc9dfb770744770773f8e586bc014fceb17cf5183b868b429c23c8757",
-				"dweb:/ipfs/QmengvYuAZr3vXGGPXQC53aGTvLge5L6ATT7qgPvvrdqoT"
+				"bzz-raw://1b0890e688fdec9837afbe9908a9719c38689be6ae5dc633716893d587c9db60",
+				"dweb:/ipfs/QmSN6rBnFqxYyhfcTjK2PcTzRnMLB3PjTq3Rfkqa9eDQ5d"
 			]
 		},
 		"localhost/contracts/DAIToken.sol": {
-			"keccak256": "0x3f049c8d541ad25261b37cb5a9846f9101ed7e7e6f7dcc05adb9434a70578c88",
+			"keccak256": "0x2f6a27358c44eded4612af6027ec6fe6076b06e9a738e2c1a649418fa208f36a",
 			"urls": [
-				"bzz-raw://b80dfe4419ef14eb1108b38435ac21cadd7858ac2968408d42de1bce3af8a73f",
-				"dweb:/ipfs/QmT2bYH7UFJJzcwpjRRYnVbZkDnkoZzpjna5AgR1agSZaw"
+				"bzz-raw://85595dc96a2fee9c1630d7f0774a5a6a6dfa8667c4c647599a76a59e34fb6bb4",
+				"dweb:/ipfs/QmdmpzroBjHWrqSBTeBpcXmf24b5b1fFwhY5LG3XHQxs1T"
 			]
 		},
 		"localhost/contracts/Ownable.sol": {

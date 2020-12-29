@@ -4,28 +4,40 @@ import './DAIToken.sol';
 
 contract CDPImpl{
 
-     constructor(address _borrower, uint256 _daiCount, address _daiAddress) public {
+     constructor(address payable _borrower, uint256 _daiCount, address _daiAddress) public {
          borrower = _borrower;
          daiCount = _daiCount;
          daiAddress = _daiAddress;
          dai = DAIToken(_daiAddress);
          isOpened = false;
+         isClosed = false;
          deposit = calculateCourse(_daiCount);
     }
 
-    address public borrower;
+    address payable public borrower;
     uint256 public daiCount;
     DAIToken private dai;
     address public daiAddress;
     bool public isOpened;
+    bool public isClosed;
     uint256 public deposit;
     
     function open() external payable{
         require(msg.sender == borrower);
-        require(!isOpened);
+        require(!isOpened && !isClosed);
         require(msg.value == deposit);
         dai.transfer(borrower, daiCount);
         isOpened = true;
+    }
+    
+    function close() external{
+        require(msg.sender == borrower);
+        require(isOpened && !isClosed);
+        if(!dai.transferFrom(borrower, address(this), daiCount))
+            return;
+        borrower.transfer(deposit);
+        isOpened = false;
+        isClosed = true;
     }
     
     function calculateCourse(uint256 _daiCount) private returns (uint256){
